@@ -31,3 +31,15 @@ connection.query(q2, function (error, results, fields){
   }
   console.log("Q2 answer ", results);
 });
+
+//Q3 - population between 500k & 1Mil
+
+let q3 = "select name from country where population between 500000 and 1000000"
+
+connection.query(q3, function (error, results, fields){
+  if(error){
+    throw error;
+  }
+  console.log("Q3 answer ", results);
+});
+
