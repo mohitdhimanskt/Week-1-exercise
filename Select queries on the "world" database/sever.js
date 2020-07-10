@@ -76,3 +76,14 @@ connection.query(q6, function (error, results, fields) {
     }
     console.log("Q6 answer ", results);
 });
+
+// Q7 - population of Rotterdam?
+
+let q7 = "select population from city where name ='rotterdam'"
+
+connection.query(q7, function (error, results, fields) {
+    if (error) {
+        throw error;
+    }
+    console.log("Q7 answer ", results);
+});
