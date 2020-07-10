@@ -43,3 +43,15 @@ connection.query(q3, function (error, results, fields){
   console.log("Q3 answer ", results);
 });
 
+//Q4 - countries in the EU
+
+let q4 = "select name from country where continent ='europe'"
+
+connection.query(q4, function (error, results, fields){
+  if(error){
+    throw error;
+    
+  }
+  console.log("Q4 answer ", results);
+});
+
