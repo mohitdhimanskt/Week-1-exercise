@@ -87,3 +87,14 @@ connection.query(q7, function (error, results, fields) {
     }
     console.log("Q7 answer ", results);
 });
+
+// Q8 -  top 10 countries by Surface Area
+
+let q8 = "select name from country order by surfacearea desc limit 10"
+
+connection.query(q8, function (error, results, fields) {
+    if (error) {
+        throw error;
+    }
+    console.log("Q8 answer ", results);
+});
