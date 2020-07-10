@@ -80,3 +80,27 @@ invitees.forEach(entry => {
       console.log("invitee added");
   });
 })
+
+rooms.forEach(entry => {
+
+  let addRoom=`insert into room values ("${entry.room_no}", "${entry.room_name}", "${entry.floor_number}")`;
+
+  connection.query(addRoom, function (error, results) {
+      if (error) {
+          throw error;
+      }
+      console.log("room inserted");
+  });
+})
+
+meetings.forEach(entry => {
+
+  let addMeeting=`insert into meeting values ("${entry.meeting_no}", "${entry.meeting_title}", "${entry.starting_time}")`;
+  
+  connection.query(addMeeting, function (error, results) {
+      if (error) {
+          throw error;
+      }
+      console.log("meeting scheduled");
+  });
+})
