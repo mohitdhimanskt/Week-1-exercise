@@ -55,3 +55,13 @@ connection.query(q4, function (error, results, fields){
   console.log("Q4 answer ", results);
 });
 
+//Q5 - descending order of their surface areas.
+let q5 = "select name from country order by surfacearea desc"
+
+connection.query(q5, function (error, results, fields){
+  if(error){
+  throw error;
+  }
+  console.log("Q5 answer ", results);
+});
+
