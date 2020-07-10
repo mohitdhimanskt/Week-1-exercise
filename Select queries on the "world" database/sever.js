@@ -65,3 +65,14 @@ connection.query(q5, function (error, results, fields){
   console.log("Q5 answer ", results);
 });
 
+
+// Q6 - names of all the cities in the Netherlands?
+
+let q6 = "select name from city where countrycode='nld'"
+
+connection.query(q6, function (error, results, fields) {
+    if (error) {
+        throw error;
+    }
+    console.log("Q6 answer ", results);
+});
