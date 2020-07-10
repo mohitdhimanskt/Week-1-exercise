@@ -110,3 +110,19 @@ connection.query(q9, function (error, results, fields) {
     }
     console.log("Q9 answer ", results);
 });
+
+
+// Q10 - population number of the world?
+
+let q10 = "select sum(population) from country"
+
+connection.query(q10, function (error, results, fields) {
+    if (error) {
+        throw error;
+    }
+    console.log("Q10 answer ", results);
+});
+
+
+
+connection.end();
