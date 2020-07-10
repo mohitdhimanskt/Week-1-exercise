@@ -21,3 +21,13 @@ if(error){
 console.log("Q1 answer", results );
 });
 
+// Q2- land in name
+
+let q2 = "select name from country where name like '%land%'"
+
+connection.query(q2, function (error, results, fields){
+  if(error){
+    throw error;
+  }
+  console.log("Q2 answer ", results);
+});
