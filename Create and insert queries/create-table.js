@@ -104,3 +104,29 @@ meetings.forEach(entry => {
       console.log("meeting scheduled");
   });
 })
+
+//printing the tables.
+
+connection.query('select * from invitee', function (error, results){
+  if (error){
+    throw error;
+
+  }
+  console.log(results);
+})
+
+connection.query('select * from room', function (error, results){
+  if(error){
+    throw error;
+  }
+  console.log(results);
+})
+
+connection.query('select * from meeting', function (error, results){
+  if(error){
+    throw error;
+  }
+  console.log(results);
+});
+
+connection.end();
