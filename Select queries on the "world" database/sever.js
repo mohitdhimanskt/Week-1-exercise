@@ -98,3 +98,15 @@ connection.query(q8, function (error, results, fields) {
     }
     console.log("Q8 answer ", results);
 });
+
+
+// Q9 - top 10 most populated cities?
+
+let q9 = "select name from city order by population desc limit 10"
+
+connection.query(q9, function (error, results, fields) {
+    if (error) {
+        throw error;
+    }
+    console.log("Q9 answer ", results);
+});
