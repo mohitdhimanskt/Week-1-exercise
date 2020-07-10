@@ -68,3 +68,15 @@ const meetings = [
   {meeting_no : '24', meeting_title : 'Cell attacks', starting_time : '12:00'},
   {meeting_no : '25', meeting_title : 'Majin Buu', starting_time : '15:00'},  
 ]
+
+invitees.forEach(entry => {
+    
+  let addInvitee=`insert into invitee values ("${entry.invitee_no}", "${entry.invitee_name}", "${entry.invited_by}")`;
+
+  connection.query(addInvitee, function (error, results) {
+      if (error) {
+          throw error;
+      }
+      console.log("invitee added");
+  });
+})
